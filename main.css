@@ -4,25 +4,36 @@
     padding: 0;
     font-family: Roboto, sans-serif ;
 }
+.containerprincipal{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
 .container{
     max-width: 1024px;
-    width: 100%;
     margin: 0 auto;
 
 }
-header .container{
-    display: block;
-    
-}
 header{
-    padding: 16px 0 0;
-    margin-bottom: 56px;
+    display: flex;
+    padding: 0;
+    margin-bottom: 40px;
     background-color: blue;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1280px;
+    width: 100%;
+    padding:0 40px;
 }
 h1{
     font-size: 2.5em;
     font-weight: bold;
     color: #fff;
+    word-wrap: break-word;
 }
 
 nav a{
@@ -40,14 +51,13 @@ nav a{
 .menu > li{
     float: left;
     list-style: none;
-    padding: 6px;
+    padding: 11px;
     position: relative;
     color: #ccc;
     font-size:1.3em;
     font-weight: bold;
     margin-right: 26px;
     margin-bottom: 0;
-    padding: 0;
 }
 .clear{
     clear:both;
@@ -59,4 +69,288 @@ nav a{
 .submenu li{
     display: block;
     padding: 6px;
+}
+.menu{
+    display: flex;
+    justify-content: flex-end;
+}
+.conteudo{
+    display: grid;
+    background-color: #eef0f0;
+    width: 863px;
+}
+main{
+    background-color:hsl(240, 14%, 99%);
+    display: flex;
+}
+.sobre-a-loja {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    gap: 6px;
+    align-items: center; 
+}
+
+.imagem-loja img {
+    max-width: 100%; 
+    width: 290px;
+}
+.texto {
+    text-align: justify; 
+    padding: 20px; 
+}
+.texto h2{
+margin-top: 0px;
+margin-left: 10px;
+padding: 0 6px 5px;
+font-size: 1.5em;
+font-style: oblique;
+color: blue;
+}
+.texto h3{
+    font-size: 1em;
+}
+.is{
+    border: 1px solid blue;
+    margin-bottom: 15px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-top: 25px;
+}
+.pro{
+    padding:0px;
+    border-bottom: 2.5px solid blue;
+}
+.pro h2{
+    font-size: 1.5em;
+    font-style: oblique;
+    color: blue;
+    
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+}
+
+.add-to-cart {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+.conteiner-flex{
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+}
+
+footer li{
+    list-style: none;
+    margin-left:16px;
+    margin-top: -26px;
+}
+footer ul img{
+    height: 22px;
+    display: flex;
+}
+.menu-toggle {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .containerprincipal {
+        max-width: 1280px;
+    }
+    .conteudo {
+        max-width: 1024px;
+    }
+    .sobre-a-loja {
+        grid-template-columns: 1fr 2fr;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .pro h2 {
+        font-size: 2em;
+    }
+    .product-list {
+        margin-bottom: 20px;
+    }
+    footer {
+        padding-top: 20px;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .containerprincipal {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    h1{
+        margin-bottom: 8px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px; /* Ajusta el espacio interno según sea necesario */
+    }
+
+    nav {
+        margin-top: 20px; /* Ajusta el espacio superior según sea necesario */
+        justify-content: center;
+        text-align: center;
+    }
+    .menu{
+        margin: 0;
+        display: inline
+    }
+
+    .menu > li {
+        margin-bottom: 10px; /* Espaciado entre elementos del menú */
+    }
+
+    .conteudo {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .imagem-loja img {
+        max-width: 100%;
+        margin: 26px 113px;
+        width: 70%;
+    }
+
+    .sobre-a-loja {
+        grid-template-columns: 1fr;
+    }
+
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer li {
+        margin-bottom: 10px;
+    }
+    .mobile-menu {
+        text-align: center;
+        background-color: aliceblue;
+        margin: 1px;
+    }
+    .art{
+        color: rgb(17, 19, 18);
+    }
+
+    .menu-toggle {
+        display: block;
+        padding: 3px 6px;
+        margin-bottom: 32px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    .submenu {
+        display: inline;
+        position: inherit;
+        left: 0;
+        width: 210px;
+        top: 100%;
+        margin-top: 0;
+}
+
+}
+@media screen and (max-width: 640px) {
+    .conteudo {
+        max-width: 100%;
+    }
+    .sobre-a-loja {
+        grid-template-columns: 1fr;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    .pro h2 {
+        font-size: 1.5em;
+        margin: 4px 31px;
+    }
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 30px;
+    }
+    .menu {
+        align-items: center;
+        float: left;
+        margin: 0;
+        background-color: aliceblue;
+        display: block;
+    }
+    .menu > li {
+        margin-bottom: 10px;
+    }
+    .imagem-loja img {
+        max-width: 100%;
+        width: 260px;
+        margin: 0px 78px;
+    }
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        padding-top: 10px;
+        width: initial;
+    }
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        padding: 3px 6px;
+        margin-bottom: 32px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    .submenu {
+        display: inline;
+        position: inherit;
+        left: 0;
+        width: 210px;
+        top: 100%;
+        margin-top: 0;
+}
+.art{
+    color: rgb(17, 19, 18);
+}
 }
